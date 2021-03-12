@@ -1,9 +1,19 @@
 package org.iesfm.datastructures;
 
 public class Lista {
+
+    // Nodo(1, Nodo(2, Nodo(3, Nodo(4, null))))
+
     private Nodo head;
 
     public Lista() {
+        head = null;
+    }
+
+    /**
+     * Elimina todos los elementos de la lista
+     */
+    public void clear() {
         head = null;
     }
 
@@ -12,7 +22,7 @@ public class Lista {
     }
 
     public Integer last() {
-        return null;
+        return head.last();
     }
 
     public void removeAtIndex(int index) {
@@ -24,8 +34,12 @@ public class Lista {
     }
 
     public void add(int value) {
-        Nodo nodo = new Nodo(head, value);
-        head = nodo;
+        if(head == null) {
+            head = new Nodo(value);
+        } else {
+            head.add(value);
+        }
+
     }
 
     public Integer head() {
