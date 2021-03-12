@@ -7,6 +7,22 @@ public class Lista {
         head = null;
     }
 
+    public int getAt(int index) {
+        return 0;
+    }
+
+    public Integer last() {
+        return null;
+    }
+
+    public void removeAtIndex(int index) {
+
+    }
+
+    public boolean contains(int number) {
+        return false;
+    }
+
     public void add(int value) {
         Nodo nodo = new Nodo(head, value);
         head = nodo;
@@ -21,12 +37,12 @@ public class Lista {
     }
 
     public int size() {
-        if(head == null) {
+        if (head == null) {
             return 0;
         } else {
             int size = 0;
             Nodo nodo = head;
-            while(nodo !=  null) {
+            while (nodo != null) {
                 size++;
                 nodo = nodo.getNext();
             }
